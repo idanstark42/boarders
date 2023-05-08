@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 
 import { useLoading } from '../helpers/loading'
-import { useGames } from '../helpers/game'
+import { useGames } from '../helpers/myths'
 import Page from '../components/structure/page'
 
-export default function Search () {
+export default function Admin () {
   const { loading } = useLoading()
-  const { games, search } = useGames()
+  const { games, edit } = useGames()
 
-  return <Page>
+  return <Page authorizedOnly>
   </Page>
 }
