@@ -5,7 +5,7 @@ const LoadingContext = createContext()
 export const useLoading = () => useContext(LoadingContext)
 
 export function LoadingProvider ({ children }) {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   const whileLoading = async callback => {
     await setLoading(true)

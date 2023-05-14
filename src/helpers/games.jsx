@@ -10,17 +10,16 @@ export const useGames = () => useContext(GamesContext)
 
 export function GamesProvider ({ children }) {
   const app = useApp()
+  const { whileLoading } = useLoading()
   const [games, setGames] = useState([])
 
-  const search = () => {
-
+  const search = async ($search, filters) => {
+    whileLoading(async () => {
+      setGames(await app.mongo.db.collection('games').find({ $text: { $search }, ...filters }).toArray())
+    })
   }
 
-  const edit = () => {
-
-  }
-
-  return <GamesContext.Provider value={{ games, search, edit }}>
+  return <GamesContext.Provider value={{ games, search }}>
     {children}
   </GamesContext.Provider>
 }

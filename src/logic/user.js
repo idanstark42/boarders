@@ -32,4 +32,4 @@ export default class User {
 
 
 User.MIN_LEVEL = 1
-User.FUNCTIONS = 'generateMythTemplate initMythStructure startMyth continueMyth summarize whitelisted'.split(' ')
+User.FUNCTIONS = 'seedMythTemplate initMythStructure startMyth continueMyth summarize whitelisted'.split(' ')

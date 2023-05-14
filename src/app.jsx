@@ -11,16 +11,18 @@ import Admin from './pages/admin'
 
 export default function App() {
   return <AppProvider>
-    <LoadingProvider>
-      <GamesProvider>
-        <Router>
-          <Routes>
-            <Route path='/auth' element={<Auth />} />
-            <Route path='/admin' element={<Admin />} />
-            <Route path='/*' element={<Search />} />
-          </Routes>
-        </Router>
-      </GamesProvider>
-    </LoadingProvider>
+    <ThemeProvider>
+      <LoadingProvider>
+        <GamesProvider>
+          <Router>
+            <Routes>
+              <Route path='/auth' element={<Auth />} />
+              <Route path='/admin' element={<Admin />} />
+              <Route path='/*' element={<Search />} />
+            </Routes>
+          </Router>
+        </GamesProvider>
+      </LoadingProvider>
+    </ThemeProvider>
   </AppProvider>
 }

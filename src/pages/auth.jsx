@@ -11,8 +11,7 @@ import { GoogleLoginButton } from 'react-social-login-buttons'
 
 import { useApp } from '../helpers/app'
 
-import Page from '../components/structure/page'
-import Paper from '../components/presentation/paper'
+import Page from '../components/page'
 
 const FORMS = { LOGIN: 'login', SIGNUP: 'signup', SEND_RESET_PASSWORD_EMAIL: 'sendResetPasswordEmail', RESET_PASSWORD: 'resetPassword' }
 
