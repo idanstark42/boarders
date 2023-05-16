@@ -12,10 +12,9 @@ export default function Search () {
   const { loading } = useLoading()
   const { games } = useGames()
 
-  return <Page>
-    <Stack>
+  return <Page fullHeight loading={loading}>
+    <Stack justifyContent='center'>
       <SearchBar />
-      <Loader open={loading} />
     </Stack>
   </Page>
 }

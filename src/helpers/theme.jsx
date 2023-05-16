@@ -12,6 +12,16 @@ const theme = createTheme({
     info:         { main: '#1E90FF' },
     warn:         { main: '#FFD700' },
     error:        { main: '#FF4500' },
+  },
+  shape: {
+    borderRadius: 20
+  },
+  components: {
+    MuiTextField: {
+      defaultProps: {
+        variant: 'outlined'
+      }
+    }
   }
 })
 

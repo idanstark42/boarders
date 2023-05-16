@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
+import './app.css'
+
 import ThemeProvider from './helpers/theme'
 import { AppProvider } from './helpers/app'
 import { LoadingProvider } from './helpers/loading'
